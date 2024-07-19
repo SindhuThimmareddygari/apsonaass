@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="auth-section">
+        <h2>Login</h2>
+        <form id="login-form">
+            <input type="text" id="login-username" placeholder="Username" required>
+            <input type="password" id="login-password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+        <h2>Register</h2>
+        <form id="register-form">
+            <input type="text" id="register-username" placeholder="Username" required>
+            <input type="password" id="register-password" placeholder="Password" required>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    <div id="notes-section" style="display: none;">
+        <h2>Notes</h2>
+        <form id="note-form">
+            <input type="text" id="note-title" placeholder="Title" required>
+            <textarea id="note-content" placeholder="Content" required></textarea>
+            <input type="text" id="note-tags" placeholder="Tags (comma separated)">
+            <select id="note-color">
+                <option value="white">White</option>
+                <option value="yellow">Yellow</option>
+                <option value="green">Green</option>
+                <option value="blue">Blue</option>
+                <option value="pink">Pink</option>
+            </select>
+            <button type="submit">Add Note</button>
+        </form>
+        <div id="notes-list"></div>
+        <h3>Trashed Notes</h3>
+        <div id="trashed-notes-list"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
